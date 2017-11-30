@@ -15,6 +15,7 @@
 // Return the appropriate QDEL_HINT; in most cases this is QDEL_HINT_QUEUE.
 /datum/proc/Destroy(force=FALSE)
 	tag = null
+
 	var/list/timers = active_timers
 	active_timers = null
 	for(var/thing in timers)
@@ -22,6 +23,7 @@
 		if (timer.spent)
 			continue
 		qdel(timer)
+
 	var/list/dc = datum_components
 	if(dc)
 		var/all_components = dc[/datum/component]
@@ -35,4 +37,11 @@
 			C._RemoveFromParent()
 			qdel(C)
 		dc.Cut()
+
+	var/list/focusers = src.focusers
+	if(focusers)
+		for(var/i in 1 to focusers.len)
+			var/mob/M = focusers[i]
+			M.set_focus(M)
+
 	return QDEL_HINT_QUEUE
