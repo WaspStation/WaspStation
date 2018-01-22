@@ -13,6 +13,7 @@
 	liked_food = VEGETABLES | DAIRY
 	disliked_food = FRUIT | GROSS
 	toxic_food = MEAT | RAW
+	mutanteyes = /obj/item/organ/eyes/moth
 	loreblurb = "### ERROR: REMOTE INTERCEPT - INFORMATION MAY HAVE BEEN REDACTED FROM THIS DOCUMENT FOR YOUR SAFETY ### Mutations into a moth-like organism have been acknowledged on Space Station 13, mothpeople are distant cousins of the flypeople. Mothpeople seem to originate fro- R̶̵̨͟E̕D҉̀͜A͜͢҉͠C̶̨͘͜͜T̸̴̵̶̕Ȩ̛̀͢D̷͡҉̕҉ ### REMOTE INTERCEPT ENDS - HAVE A SECURE DAY ### "
 
 /datum/species/moth/on_species_gain(mob/living/carbon/C)

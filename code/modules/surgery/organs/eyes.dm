@@ -327,3 +327,8 @@
 
 /obj/item/organ/eyes/vox/emp_act()
 	owner.hallucination += 10
+
+/obj/item/organ/eyes/moth
+	name = "moth eyes"
+	desc = "These eyes seem to have increased sensitivity to bright light, with no improvement to low light vision."
+	flash_protect = -1
