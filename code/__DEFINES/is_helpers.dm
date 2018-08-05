@@ -55,6 +55,7 @@
 #define isslimeperson(A) (is_species(A, /datum/species/jelly/slime))
 #define isshadowperson(A) (is_species(A, /datum/species/shadow))
 #define iszombie(A) (is_species(A, /datum/species/zombie))
+#define ismoth(A) (is_species(A, /datum/species/moth))
 #define ishumanbasic(A) (is_species(A, /datum/species/human))
 #define isethari(A) (is_species(A, /datum/species/ethari))
 #define isipc(A) (is_species(A, /datum/species/ipc))
