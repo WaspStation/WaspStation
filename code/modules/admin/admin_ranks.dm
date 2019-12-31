@@ -27,7 +27,7 @@ GLOBAL_PROTECT(admin_ranks)
 /datum/admin_rank/vv_edit_var(var_name, var_value)
 	return FALSE
 
-#if DM_VERSION > 512
+#if DM_VERSION > 513
 #error remove the rejuv keyword from this proc
 #endif
 /proc/admin_keyword_to_flag(word, previous_rights=0)

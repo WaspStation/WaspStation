@@ -38,7 +38,7 @@
 #define R_SPAWN			4096
 #define R_MENTOR		16834
 
-#if DM_VERSION > 512
+#if DM_VERSION > 513
 #error Remove the flag below , its been long enough
 #endif
 //legacy , remove post 512, it was replaced by R_POLL
