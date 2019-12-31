@@ -7,6 +7,8 @@
 
 	make_datum_references_lists()	//initialises global lists for referencing frequently used datums (so that we only ever do it once)
 
+	TgsNew(minimum_required_security_level = TGS_SECURITY_TRUSTED)
+
 	new /datum/controller/configuration
 
 	CheckSchemaVersion()
@@ -100,6 +102,7 @@
 		log_game("Round ID: [GLOB.round_id]")
 
 /world/Topic(T, addr, master, key)
+	TGS_TOPIC
 	var/list/input = params2list(T)
 
 	var/pinging = ("ping" in input)
@@ -244,6 +247,8 @@
 		to_chat(world, "<span class='boldannounce'>Rebooting world...</span>")
 		Master.Shutdown()	//run SS shutdowns
 	log_world("World rebooted at [time_stamp()]")
+
+	TgsReboot()
 
 	if(CONFIG_GET(flag/shutdown_for_update))
 		var/http = world.Export(CONFIG_GET(string/update_version_string_uri))

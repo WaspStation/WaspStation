@@ -2,11 +2,17 @@
 
 #define isdatum(D) (istype(D, /datum))
 
+#if DM_VERSION < 513
 #define islist(L) (istype(L, /list))
+#endif
 
 #define in_range(source, user) (get_dist(source, user) <= 1)
 
+#if DM_VERSION < 513
 #define ismovableatom(A) (istype(A, /atom/movable))
+#else
+#define ismovableatom(A) ismovable(A)
+#endif
 
 //Turfs
 #define isopenturf(A) (istype(A, /turf/open))

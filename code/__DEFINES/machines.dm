@@ -16,7 +16,7 @@
 //bitflags for door switches.
 #define OPEN	1
 #define IDSCAN	2
-#define BOLTS	4
+//#define BOLTS	4 - this exact definition is the same as in construction.dm
 #define SHOCK	8
 #define SAFE	16
 

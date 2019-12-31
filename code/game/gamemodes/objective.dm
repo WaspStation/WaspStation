@@ -56,7 +56,6 @@ GLOBAL_LIST_EMPTY(objectives)
 		if(M)
 			. += M
 
-/
 /datum/objective/proc/find_target()
 	var/list/datum/mind/owners = get_owners()
 	var/list/possible_targets = list()

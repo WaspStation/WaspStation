@@ -120,7 +120,7 @@ We all do it, even the best of us. If you just want to make a tgui **fast**, her
   switch(action)
     if("copypasta")
       var/newvar = params["var"]
-      var = Clamp(newvar, min_val, max_val) // Just a demo of proper input sanitation.
+      var = CLAMP(newvar, min_val, max_val) // Just a demo of proper input sanitation.
       . = TRUE
   update_icon() // Not applicable to all objects.
 ```

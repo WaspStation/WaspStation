@@ -182,7 +182,7 @@
 	//TOXINS/PLASMA
 	if(Toxins_partialpressure > safe_tox_max)
 		var/ratio = (breath_gases["plasma"][MOLES]/safe_tox_max) * 10
-		adjustToxLoss(Clamp(ratio, MIN_TOXIC_GAS_DAMAGE, MAX_TOXIC_GAS_DAMAGE))
+		adjustToxLoss(CLAMP(ratio, MIN_TOXIC_GAS_DAMAGE, MAX_TOXIC_GAS_DAMAGE))
 		throw_alert("too_much_tox", /obj/screen/alert/too_much_tox)
 	else
 		clear_alert("too_much_tox")
@@ -287,7 +287,7 @@
 				dna.temporary_mutations.Remove(mut)
 
 	if(radiation)
-		radiation = Clamp(radiation, 0, 100)
+		radiation = CLAMP(radiation, 0, 100)
 		switch(radiation)
 			if(0 to 50)
 				radiation = max(radiation-1,0)

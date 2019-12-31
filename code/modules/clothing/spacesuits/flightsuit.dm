@@ -175,7 +175,7 @@
 		assembled = TRUE
 		boost_chargerate *= cap
 		boost_drain -= manip
-		powersetting_high = Clamp(laser, 0, 3)
+		powersetting_high = CLAMP(laser, 0, 3)
 		emp_disable_threshold = bin*1.25
 		crash_disable_threshold = bin*2
 		stabilizer_decay_amount = scan*3.5
@@ -234,15 +234,15 @@
 /obj/item/device/flightpack/proc/adjust_momentum(amountx, amounty, reduce_amount_total = 0)
 	if(reduce_amount_total != 0)
 		if(momentum_x > 0)
-			momentum_x = Clamp(momentum_x - reduce_amount_total, 0, momentum_max)
+			momentum_x = CLAMP(momentum_x - reduce_amount_total, 0, momentum_max)
 		else if(momentum_x < 0)
-			momentum_x = Clamp(momentum_x + reduce_amount_total, -momentum_max, 0)
+			momentum_x = CLAMP(momentum_x + reduce_amount_total, -momentum_max, 0)
 		if(momentum_y > 0)
-			momentum_y = Clamp(momentum_y - reduce_amount_total, 0, momentum_max)
+			momentum_y = CLAMP(momentum_y - reduce_amount_total, 0, momentum_max)
 		else if(momentum_y < 0)
-			momentum_y = Clamp(momentum_y + reduce_amount_total, -momentum_max, 0)
-	momentum_x = Clamp(momentum_x + amountx, -momentum_max, momentum_max)
-	momentum_y = Clamp(momentum_y + amounty, -momentum_max, momentum_max)
+			momentum_y = CLAMP(momentum_y + reduce_amount_total, -momentum_max, 0)
+	momentum_x = CLAMP(momentum_x + amountx, -momentum_max, momentum_max)
+	momentum_y = CLAMP(momentum_y + amounty, -momentum_max, momentum_max)
 	calculate_momentum_speed()
 
 /obj/item/device/flightpack/intercept_user_move(dir, mob, newLoc, oldLoc)
@@ -351,7 +351,7 @@
 
 /obj/item/device/flightpack/proc/handle_damage()
 	if(crash_damage)
-		crash_damage = Clamp(crash_damage-crash_heal_amount, 0, crash_disable_threshold*10)
+		crash_damage = CLAMP(crash_damage-crash_heal_amount, 0, crash_disable_threshold*10)
 		if(crash_damage >= crash_disable_threshold)
 			crash_disabled = TRUE
 		if(crash_disabled && (crash_damage <= 1))
@@ -359,7 +359,7 @@
 			crash_disable_message = FALSE
 			usermessage("Gyroscopic sensors recalibrated. Flight systems re-enabled.")
 	if(emp_damage)
-		emp_damage = Clamp(emp_damage-emp_heal_amount, 0, emp_disable_threshold * 10)
+		emp_damage = CLAMP(emp_damage-emp_heal_amount, 0, emp_disable_threshold * 10)
 		if(emp_damage >= emp_disable_threshold)
 			emp_disabled = TRUE
 		if(emp_disabled && (emp_damage <= 0.5))
@@ -395,11 +395,11 @@
 
 /obj/item/device/flightpack/proc/handle_boost()
 	if(boost)
-		boost_charge = Clamp(boost_charge-boost_drain, 0, boost_maxcharge)
+		boost_charge = CLAMP(boost_charge-boost_drain, 0, boost_maxcharge)
 		if(boost_charge < 1)
 			deactivate_booster()
 	if(boost_charge < boost_maxcharge)
-		boost_charge = Clamp(boost_charge+boost_chargerate, 0, boost_maxcharge)
+		boost_charge = CLAMP(boost_charge+boost_chargerate, 0, boost_maxcharge)
 
 /obj/item/device/flightpack/proc/cycle_power()
 	if(powersetting < powersetting_high)
@@ -429,7 +429,7 @@
 	wearer.adjustBruteLoss(userdamage)
 	usermessage("WARNING: Stabilizers taking damage!", "boldwarning")
 	wearer.visible_message(crashmessagesrc)
-	crash_damage = Clamp(crash_damage + crash_damage_high, 0, crash_disable_threshold*1.5)
+	crash_damage = CLAMP(crash_damage + crash_damage_high, 0, crash_disable_threshold*1.5)
 
 /obj/item/device/flightpack/proc/userknockback(density, anchored, speed, dir)
 	var/angle = dir2angle(dir)

@@ -24,7 +24,11 @@ GLOBAL_LIST_INIT(sqrtTable, list(1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4,
 /proc/Floor(x, y=1)
 	return round(x / y) * y
 
+#if DM_VERSION < 513
 #define Clamp(CLVALUE,CLMIN,CLMAX) ( max( (CLMIN), min((CLVALUE), (CLMAX)) ) )
+#else
+#define Clamp(CLVALUE,CLMIN,CLMAX) clamp(CLVALUE, CLMIN, CLMAX)
+#endif
 
 /proc/Modulus(x, y)	//Byond's modulus doesn't work with decimals.
 	return x - y * round(x / y)
@@ -111,8 +115,13 @@ GLOBAL_LIST_INIT(sqrtTable, list(1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4,
 	. += (-b - root) / bottom
 
 // tangent
+#if DM_VERSION < 513
 /proc/Tan(x)
 	return sin(x) / cos(x)
+#else
+/proc/Tan(x)
+	return tan(x)
+#endif
 
 /proc/ToDegrees(radians)
 				  // 180 / Pi

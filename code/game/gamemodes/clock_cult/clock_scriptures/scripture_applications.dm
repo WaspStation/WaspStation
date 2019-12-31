@@ -30,7 +30,7 @@
 		if(ishuman(M.current))
 			human_servants++
 	construct_limit = human_servants / 4 //1 per 4 human servants, and a maximum of 3 marauders
-	construct_limit = Clamp(construct_limit, 1, 3)
+	construct_limit = CLAMP(construct_limit, 1, 3)
 
 /datum/clockwork_scripture/create_object/prolonging_prism/check_special_requirements()
 	if(SSshuttle.emergency.mode == SHUTTLE_DOCKED || SSshuttle.emergency.mode == SHUTTLE_IGNITING || SSshuttle.emergency.mode == SHUTTLE_STRANDED || SSshuttle.emergency.mode == SHUTTLE_ESCAPE)

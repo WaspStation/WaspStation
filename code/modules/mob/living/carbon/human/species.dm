@@ -658,19 +658,19 @@
 				if("tail_unathi")
 					S = GLOB.tails_list_unathi[H.dna.features["tail_unathi"]]
 				if("waggingtail_unathi")
-					S.= GLOB.animated_tails_list_unathi[H.dna.features["tail_unathi"]]
+					S = GLOB.animated_tails_list_unathi[H.dna.features["tail_unathi"]]
 				if("tail_ethari")
 					S = GLOB.tails_list_ethari[H.dna.features["tail_ethari"]]
 				if("waggingtail_ethari")
-					S.= GLOB.animated_tails_list_ethari[H.dna.features["tail_ethari"]]
+					S = GLOB.animated_tails_list_ethari[H.dna.features["tail_ethari"]]
 				if("tail_human")
 					S = GLOB.tails_list_human[H.dna.features["tail_human"]]
 				if("waggingtail_human")
-					S.= GLOB.animated_tails_list_human[H.dna.features["tail_human"]]
+					S = GLOB.animated_tails_list_human[H.dna.features["tail_human"]]
 				if("spines")
 					S = GLOB.spines_list[H.dna.features["spines"]]
 				if("waggingspines")
-					S.= GLOB.animated_spines_list[H.dna.features["spines"]]
+					S = GLOB.animated_spines_list[H.dna.features["spines"]]
 				if("snout")
 					S = GLOB.snouts_list[H.dna.features["snout"]]
 				if("snout_ethari")

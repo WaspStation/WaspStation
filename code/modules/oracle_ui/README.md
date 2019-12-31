@@ -73,7 +73,7 @@ Calling `soft_update_fields` will result in the UI being updated on all clients,
 	data["flush"] = flush ? ui.act("Disengage", user, "handle-0", class="active") : ui.act("Engage", user, "handle-1")
 	data["full_pressure"] = full_pressure ? "Ready" : (pressure_charging ? "Pressurizing" : "Off")
 	data["pressure_charging"] = pressure_charging ? ui.act("Turn Off", user, "pump-0", class="active", disabled=full_pressure) : ui.act("Turn On", user, "pump-1", disabled=full_pressure)
-	var/per = full_pressure ? 100 : Clamp(100* air_contents.return_pressure() / (SEND_PRESSURE), 0, 99)
+	var/per = full_pressure ? 100 : CLAMP(100* air_contents.return_pressure() / (SEND_PRESSURE), 0, 99)
 	data["per"] = "[round(per, 1)]%"
 	data["contents"] = ui.act("Eject Contents", user, "eject", disabled=contents.len < 1)
 	data["isai"] = isAI(user)
