@@ -301,6 +301,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_vox_facial_quills"]		>> features["vox_facial_quills"]
 	S["feature_vox_body_markings"]		>> features["vox_body_markings"]
 	S["feature_vox_tail_markings"]		>> features["vox_tail_markings"]
+	S["feature_moth_wings"]				>> features["moth_wings"]
 
 	if(!CONFIG_GET(flag/join_with_mutant_humans))
 		features["tail_human"] = "none"
@@ -379,6 +380,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["vox_facial_quills"]	 = sanitize_inlist(features["vox_facial_quills"], GLOB.vox_facial_quills_list, "None")
 	features["vox_body_markings"]	 = sanitize_inlist(features["vox_body_markings"], GLOB.vox_body_markings_list, "None")
 	features["vox_tail_markings"]	 = sanitize_inlist(features["vox_tail_markings"], GLOB.vox_tail_markings_list, "None")
+	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list, "Plain")
 
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
 	job_civilian_high = sanitize_integer(job_civilian_high, 0, 65535, initial(job_civilian_high))
@@ -443,6 +445,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_vox_facial_quills"]		, features["vox_facial_quills"])
 	WRITE_FILE(S["feature_vox_body_markings"]		, features["vox_body_markings"])
 	WRITE_FILE(S["feature_vox_tail_markings"]		, features["vox_tail_markings"])
+	WRITE_FILE(S["feature_moth_wings"]			, features["moth_wings"])
 	WRITE_FILE(S["clown_name"]			, custom_names["clown"])
 	WRITE_FILE(S["mime_name"]			, custom_names["mime"])
 	WRITE_FILE(S["ai_name"]			, custom_names["ai"])

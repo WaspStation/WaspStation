@@ -89,9 +89,11 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/vox_body_markings, GLOB.vox_body_markings_list)
 	if(!GLOB.vox_tail_markings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/vox_tail_markings, GLOB.vox_tail_markings_list)
+	if(!GLOB.moth_wings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings, GLOB.moth_wings_list)
 
 	//For now we will always return none for tail_human and ears.
-	return(list("mcolor" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"), "tail_unathi" = pick(GLOB.tails_list_unathi), "tail_ethari" = pick(GLOB.tails_list_ethari), "tail_human" = "None", "wings" = "None", "snout" = pick(GLOB.snouts_list), "snout_ethari" = pick(GLOB.snouts_ethari_list), "ears_ethari" = "Fox", "horns" = pick(GLOB.horns_list), "ears" = "None", "frills" = pick(GLOB.frills_list), "spines" = pick(GLOB.spines_list), "body_markings" = pick(GLOB.body_markings_list), "legs" = "Normal Legs", "ipc_screen" = pick(GLOB.ipc_screens_list), "ipc_antenna" = pick(GLOB.ipc_antennas_list),"ipc_chassis" = pick(GLOB.ipc_chassis_list),"vox_body" = pick(GLOB.vox_bodies_list),"vox_quills" = pick(GLOB.vox_quills_list),"vox_facial_quills" = pick(GLOB.vox_facial_quills_list),"vox_body_markings" = pick(GLOB.vox_body_markings_list),"vox_tail_markings" = pick(GLOB.vox_tail_markings_list)))
+	return(list("mcolor" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"), "tail_unathi" = pick(GLOB.tails_list_unathi), "tail_ethari" = pick(GLOB.tails_list_ethari), "tail_human" = "None", "wings" = "None", "snout" = pick(GLOB.snouts_list), "snout_ethari" = pick(GLOB.snouts_ethari_list), "ears_ethari" = "Fox", "horns" = pick(GLOB.horns_list), "ears" = "None", "frills" = pick(GLOB.frills_list), "spines" = pick(GLOB.spines_list), "body_markings" = pick(GLOB.body_markings_list), "legs" = "Normal Legs", "ipc_screen" = pick(GLOB.ipc_screens_list), "ipc_antenna" = pick(GLOB.ipc_antennas_list),"ipc_chassis" = pick(GLOB.ipc_chassis_list),"vox_body" = pick(GLOB.vox_bodies_list),"vox_quills" = pick(GLOB.vox_quills_list),"vox_facial_quills" = pick(GLOB.vox_facial_quills_list),"vox_body_markings" = pick(GLOB.vox_body_markings_list),"vox_tail_markings" = pick(GLOB.vox_tail_markings_list), "moth_wings" = pick(GLOB.moth_wings_list)))
 
 /proc/random_hair_style(gender)
 	switch(gender)
@@ -112,20 +114,20 @@
 			return pick(GLOB.facial_hair_styles_list)
 
 /proc/random_unique_name(gender, attempts_to_find_unique_name=10)
-	for(var/i=1, i<=attempts_to_find_unique_name, i++)
+	for(var/i in 1 to attempts_to_find_unique_name)
 		if(gender==FEMALE)
 			. = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 		else
 			. = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
 
-		if(i != attempts_to_find_unique_name && !findname(.))
+		if(!findname(.))
 			break
 
 /proc/random_unique_unathi_name(gender, attempts_to_find_unique_name=10)
 	for(var/i=1, i<=attempts_to_find_unique_name, i++)
 		. = capitalize(unathi_name(gender))
 
-		if(i != attempts_to_find_unique_name && !findname(.))
+		if(!findname(.))
 			break
 
 /proc/random_unique_ethari_name(gender, attempts_to_find_unique_name=10)
@@ -136,10 +138,17 @@
 			break
 
 /proc/random_unique_plasmaman_name(attempts_to_find_unique_name=10)
-	for(var/i=1, i<=attempts_to_find_unique_name, i++)
+	for(var/i in 1 to attempts_to_find_unique_name)
 		. = capitalize(plasmaman_name())
 
-		if(i != attempts_to_find_unique_name && !findname(.))
+		if(!findname(.))
+			break
+
+/proc/random_unique_moth_name(attempts_to_find_unique_name=10)
+	for(var/i in 1 to attempts_to_find_unique_name)
+		. = capitalize(moth_name())
+
+		if(!findname(.))
 			break
 
 /proc/random_skin_tone()

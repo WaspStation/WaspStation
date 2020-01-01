@@ -470,7 +470,7 @@
 			standing += lip_overlay
 
 		// eyes
-		if((EYECOLOR in species_traits) && HD)
+		if(!(NOEYES in species_traits))
 			var/mutable_appearance/eye_overlay = mutable_appearance('icons/mob/human_face.dmi', "eyes", -BODY_LAYER)
 			eye_overlay.color = "#" + H.eye_color
 			if(OFFSET_FACE in H.dna.species.offset_features)
@@ -711,6 +711,8 @@
 					S = GLOB.wings_open_list[H.dna.features["wings"]]
 				if("legs")
 					S = GLOB.legs_list[H.dna.features["legs"]]
+				if("moth_wings")
+					S = GLOB.moth_wings_list[H.dna.features["moth_wings"]]
 
 			if(!S || S.icon_state == "none")
 				continue
