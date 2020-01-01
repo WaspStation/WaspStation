@@ -15,7 +15,8 @@
 	},
 /area/shuttle/abandoned)
 "ae" = (
-/obj/effect/spawner/structure/window/shuttle,
+/obj/structure/grille,
+/obj/structure/window/shuttle,
 /turf/open/floor/plating,
 /area/shuttle/abandoned)
 "af" = (
@@ -33,9 +34,10 @@
 	id = "whiteship";
 	launch_status = 0;
 	name = "NT Recovery White-Ship";
-	port_angle = -90;
-	preferred_direction = 4;
+	port_angle = 180;
+	preferred_direction = 1;
 	roundstart_move = "whiteship_away";
+	timid = 1;
 	width = 27
 	},
 /obj/machinery/door/airlock/titanium{
@@ -70,8 +72,9 @@
 	},
 /area/shuttle/abandoned)
 "ak" = (
-/obj/structure/shuttle/engine/propulsion/left{
-	dir = 8
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_l";
+	dir = 4
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned)
@@ -98,18 +101,18 @@
 /obj/effect/decal/cleanable/greenglow{
 	desc = "Looks like something's sprung a leak"
 	},
-/obj/structure/light_construct/small{
-	dir = 8
-	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "ao" = (
 /obj/structure/mirror{
-	pixel_x = 28
+	pixel_x = 28;
+	pixel_y = 0
 	},
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
 	},
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
@@ -130,12 +133,12 @@
 "aq" = (
 /obj/structure/closet/wardrobe/mixed,
 /obj/item/clothing/under/rank/centcom_officer{
-	desc = "A badge on the arm indicates that it's meant to be worn by CentCom recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
-	name = "\improper dusty old CentCom jumpsuit"
+	desc = "A badge on the arm indicates that it's meant to be worn by Centcom recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
+	name = "\improper dusty old Centcom jumpsuit"
 	},
 /obj/item/clothing/under/rank/centcom_commander{
-	desc = "A badge on the arm indicates that it's meant to be worn by CentCom recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
-	name = "\improper dusty old CentCom jumpsuit"
+	desc = "A badge on the arm indicates that it's meant to be worn by Centcom recovery teams. This one seems dusty and clearly hasn't been cleaned in some time.";
+	name = "\improper dusty old Centcom jumpsuit"
 	},
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
@@ -145,7 +148,7 @@
 /area/shuttle/abandoned)
 "ar" = (
 /obj/structure/table,
-/obj/item/storage/pill_bottle/dice{
+/obj/item/weapon/storage/pill_bottle/dice{
 	pixel_y = 3
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -159,7 +162,7 @@
 /obj/item/stack/sheet/metal{
 	amount = 50
 	},
-/obj/item/stock_parts/cell/high{
+/obj/item/weapon/stock_parts/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_y = 2
@@ -189,9 +192,6 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "av" = (
@@ -206,9 +206,6 @@
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
-	},
-/obj/structure/light_construct/small{
-	dir = 8
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
@@ -227,7 +224,7 @@
 /obj/structure/closet/crate/medical{
 	name = "medical crate"
 	},
-/obj/item/storage/firstaid/o2{
+/obj/item/weapon/storage/firstaid/o2{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -239,15 +236,15 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
+/obj/effect/turf_decal/bot,
 /area/shuttle/abandoned)
 "az" = (
 /obj/structure/closet/crate{
 	name = "spare equipment crate"
 	},
-/obj/item/grenade/chem_grenade/metalfoam,
-/obj/item/relic,
+/obj/item/weapon/grenade/chem_grenade/metalfoam,
+/obj/item/weapon/relic,
 /obj/item/device/t_scanner,
 /obj/effect/spawner/lootdrop/maintenance{
 	lootcount = 3;
@@ -257,19 +254,19 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
+/obj/effect/turf_decal/bot,
 /area/shuttle/abandoned)
 "aA" = (
-/obj/item/storage/box/lights/mixed,
-/obj/item/cigbutt,
+/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/weapon/cigbutt,
 /obj/structure/closet/crate{
 	icon_state = "crateopen";
 	name = "spare equipment crate";
 	opened = 1
 	},
-/obj/item/tank/internals/oxygen/red,
-/obj/item/tank/internals/air,
+/obj/item/weapon/tank/internals/oxygen/red,
+/obj/item/weapon/tank/internals/air,
 /obj/effect/spawner/lootdrop/maintenance{
 	lootcount = 2;
 	name = "2maintenance loot spawner"
@@ -280,15 +277,15 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
+/obj/effect/turf_decal/bot,
 /area/shuttle/abandoned)
 "aB" = (
 /obj/structure/closet/crate{
 	name = "emergency supplies crate"
 	},
-/obj/item/storage/toolbox/emergency,
-/obj/item/storage/toolbox/emergency,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/storage/toolbox/emergency,
 /obj/item/device/flashlight/flare{
 	pixel_x = 3;
 	pixel_y = 3
@@ -297,30 +294,29 @@
 	pixel_x = -6;
 	pixel_y = -2
 	},
-/obj/item/crowbar,
-/obj/item/wrench,
+/obj/item/weapon/crowbar,
+/obj/item/weapon/wrench,
 /obj/effect/spawner/lootdrop/maintenance,
-/obj/item/extinguisher,
-/obj/item/extinguisher,
+/obj/item/weapon/extinguisher,
+/obj/item/weapon/extinguisher,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/bot,
-/obj/structure/light_construct/small{
-	dir = 1
-	},
 /turf/open/floor/plasteel,
+/obj/effect/turf_decal/bot,
 /area/shuttle/abandoned)
 "aC" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 8
+	icon_state = "propulsion";
+	dir = 4
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned)
 "aD" = (
 /obj/structure/shuttle/engine/heater{
+	icon_state = "heater";
 	dir = 8
 	},
 /obj/structure/window/reinforced{
@@ -363,32 +359,24 @@
 	icon_state = "remains";
 	name = "remains"
 	},
-/obj/item/gun/energy/laser/retro,
+/obj/item/weapon/gun/energy/laser/retro,
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "aI" = (
 /obj/structure/bed,
-/obj/item/bedsheet/centcom,
+/obj/item/weapon/bedsheet/centcom,
+/obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/structure/light_construct/small{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/ash{
-	desc = "They look like human remains, and have clearly been gnawed at.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "remains";
-	name = "remains"
-	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "aJ" = (
 /obj/structure/table,
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
+/obj/item/weapon/storage/belt/utility,
+/obj/item/weapon/storage/belt/utility,
 /obj/item/device/radio/off,
 /obj/item/device/radio/off,
 /obj/item/device/radio/off,
@@ -396,9 +384,6 @@
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
-	},
-/obj/structure/light_construct/small{
-	dir = 8
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
@@ -446,10 +431,10 @@
 /obj/machinery/door/airlock/titanium{
 	name = "cargo bay"
 	},
-/obj/effect/turf_decal/delivery{
+/turf/open/floor/plasteel{
 	dir = 1
 	},
-/turf/open/floor/plasteel{
+/obj/effect/turf_decal/delivery{
 	dir = 1
 	},
 /area/shuttle/abandoned)
@@ -459,10 +444,10 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/delivery{
+/turf/open/floor/plasteel{
 	dir = 1
 	},
-/turf/open/floor/plasteel{
+/obj/effect/turf_decal/delivery{
 	dir = 1
 	},
 /area/shuttle/abandoned)
@@ -471,10 +456,10 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/delivery{
+/turf/open/floor/plasteel{
 	dir = 1
 	},
-/turf/open/floor/plasteel{
+/obj/effect/turf_decal/delivery{
 	dir = 1
 	},
 /area/shuttle/abandoned)
@@ -485,10 +470,10 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/delivery{
+/turf/open/floor/plasteel{
 	dir = 1
 	},
-/turf/open/floor/plasteel{
+/obj/effect/turf_decal/delivery{
 	dir = 1
 	},
 /area/shuttle/abandoned)
@@ -504,7 +489,7 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/item/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
 /obj/effect/decal/cleanable/ash{
 	desc = "They look like human remains, and have clearly been gnawed at.";
 	icon = 'icons/effects/blood.dmi';
@@ -517,14 +502,12 @@
 "aT" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/mirror{
-	pixel_x = 28
+	pixel_x = 28;
+	pixel_y = 0
 	},
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
@@ -543,7 +526,7 @@
 /area/shuttle/abandoned)
 "aV" = (
 /obj/structure/bed,
-/obj/item/bedsheet/centcom,
+/obj/item/weapon/bedsheet/centcom,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -564,7 +547,7 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/item/wrench,
+/obj/item/weapon/wrench,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "aX" = (
@@ -573,11 +556,11 @@
 	layer = 2.9;
 	pixel_y = 2
 	},
-/obj/item/storage/toolbox/electrical{
+/obj/item/weapon/storage/toolbox/electrical{
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/storage/toolbox/mechanical{
+/obj/item/weapon/storage/toolbox/mechanical{
 	pixel_x = -2;
 	pixel_y = -1
 	},
@@ -611,9 +594,8 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/bot,
-/obj/structure/light_construct/small,
 /turf/open/floor/plasteel,
+/obj/effect/turf_decal/bot,
 /area/shuttle/abandoned)
 "bb" = (
 /obj/structure/closet/emcloset,
@@ -621,8 +603,8 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
+/obj/effect/turf_decal/bot,
 /area/shuttle/abandoned)
 "bc" = (
 /obj/structure/closet/firecloset/full,
@@ -630,8 +612,8 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
+/obj/effect/turf_decal/bot,
 /area/shuttle/abandoned)
 "bd" = (
 /obj/machinery/door/airlock/titanium{
@@ -668,7 +650,10 @@
 	req_access_txt = "0";
 	use_power = 0
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/shuttle{
+	icon_state = "swall12";
+	dir = 2
+	},
 /area/shuttle/abandoned)
 "bh" = (
 /turf/closed/wall/shuttle{
@@ -710,10 +695,10 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/effect/turf_decal/delivery{
+/turf/open/floor/plasteel{
 	dir = 1
 	},
-/turf/open/floor/plasteel{
+/obj/effect/turf_decal/delivery{
 	dir = 1
 	},
 /area/shuttle/abandoned)
@@ -737,9 +722,6 @@
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
-	},
-/obj/machinery/light{
-	dir = 1
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
@@ -774,9 +756,6 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/structure/light_construct{
-	dir = 1
-	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "bt" = (
@@ -785,12 +764,12 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/item/storage/photo_album,
+/obj/item/weapon/storage/photo_album,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "bu" = (
 /obj/structure/table,
-/obj/item/paper_bin{
+/obj/item/weapon/paper_bin{
 	pixel_x = -1;
 	pixel_y = 6
 	},
@@ -809,13 +788,11 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/structure/light_construct/small{
-	dir = 4
-	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "bw" = (
 /obj/machinery/vending/coffee{
+	pixel_x = -2;
 	use_power = 0
 	},
 /turf/open/floor/mineral/titanium,
@@ -852,7 +829,8 @@
 	name = "dust"
 	},
 /obj/structure/fluff/empty_sleeper/nanotrasen{
-	dir = 1
+	dir = 1;
+	pixel_y = 0
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
@@ -866,7 +844,8 @@
 	name = "dust"
 	},
 /obj/structure/fluff/empty_sleeper/nanotrasen{
-	dir = 1
+	dir = 1;
+	pixel_y = 0
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
@@ -882,7 +861,7 @@
 /area/shuttle/abandoned)
 "bD" = (
 /obj/structure/table,
-/obj/item/folder/blue,
+/obj/item/weapon/folder/blue,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -916,7 +895,7 @@
 /area/shuttle/abandoned)
 "bG" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -925,11 +904,11 @@
 /area/shuttle/abandoned)
 "bH" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/condiment/peppermill{
+/obj/item/weapon/reagent_containers/food/condiment/peppermill{
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/food/condiment/saltshaker{
+/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
 	pixel_x = -3;
 	pixel_y = 4
 	},
@@ -941,7 +920,7 @@
 /area/shuttle/abandoned)
 "bI" = (
 /obj/structure/table,
-/obj/item/storage/fancy/donut_box,
+/obj/item/weapon/storage/fancy/donut_box,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -981,7 +960,7 @@
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/structure/table,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
@@ -1040,12 +1019,12 @@
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "bQ" = (
-/obj/item/storage/toolbox/emergency{
+/obj/item/weapon/storage/toolbox/emergency{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/storage/toolbox/emergency,
-/obj/item/storage/toolbox/emergency{
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/weapon/storage/toolbox/emergency{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -1091,13 +1070,13 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "bV" = (
-/obj/machinery/vending/cola/random,
+/obj/machinery/vending/cola{
+	pixel_x = -1;
+	use_power = 0
+	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "bW" = (
@@ -1164,11 +1143,11 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "cb" = (
-/obj/item/phone{
+/obj/item/weapon/phone{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/cigbutt/cigarbutt{
+/obj/item/weapon/cigbutt/cigarbutt{
 	pixel_x = 5;
 	pixel_y = -1
 	},
@@ -1186,7 +1165,10 @@
 	},
 /area/shuttle/abandoned)
 "cd" = (
-/obj/machinery/vending/snack/random,
+/obj/machinery/vending/snack{
+	pixel_x = -1;
+	use_power = 0
+	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "ce" = (
@@ -1214,7 +1196,6 @@
 	name = "dust"
 	},
 /obj/item/device/megaphone,
-/obj/structure/light_construct,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "ch" = (
@@ -1277,6 +1258,7 @@
 /area/shuttle/abandoned)
 "co" = (
 /obj/machinery/door/airlock/titanium{
+	icon_state = "door_closed";
 	name = "medbay";
 	welded = 0
 	},
@@ -1293,16 +1275,16 @@
 	},
 /area/shuttle/abandoned)
 "cq" = (
-/obj/item/storage/bag/plants/portaseeder,
+/obj/item/weapon/storage/bag/plants/portaseeder,
 /obj/structure/table,
-/obj/item/reagent_containers/spray/plantbgone{
+/obj/item/weapon/reagent_containers/spray/plantbgone{
 	pixel_x = 13;
 	pixel_y = 5
 	},
-/obj/item/reagent_containers/glass/bottle/nutrient/ez,
-/obj/item/reagent_containers/glass/bottle/nutrient/ez,
-/obj/item/reagent_containers/glass/bottle/nutrient/ez,
-/obj/item/reagent_containers/glass/bottle/nutrient/rh{
+/obj/item/weapon/reagent_containers/glass/bottle/nutrient/ez,
+/obj/item/weapon/reagent_containers/glass/bottle/nutrient/ez,
+/obj/item/weapon/reagent_containers/glass/bottle/nutrient/ez,
+/obj/item/weapon/reagent_containers/glass/bottle/nutrient/rh{
 	pixel_x = -2;
 	pixel_y = 3
 	},
@@ -1329,9 +1311,6 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/structure/light_construct/small{
-	dir = 1
-	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "ct" = (
@@ -1357,7 +1336,7 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
-/obj/item/storage/box/donkpockets,
+/obj/item/weapon/storage/box/donkpockets,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1375,7 +1354,7 @@
 /area/shuttle/abandoned)
 "cx" = (
 /obj/structure/fluff/empty_sleeper/nanotrasen,
-/obj/item/circuitboard/machine/autolathe,
+/obj/item/weapon/circuitboard/machine/autolathe,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1395,12 +1374,12 @@
 /area/shuttle/abandoned)
 "cz" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/blood{
+/obj/item/weapon/reagent_containers/blood/empty{
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/random,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/random,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1410,40 +1389,36 @@
 /area/shuttle/abandoned)
 "cA" = (
 /obj/structure/table/optable,
-
-/obj/item/storage/firstaid/regular,
+/obj/item/weapon/surgical_drapes,
+/obj/item/weapon/storage/firstaid/regular,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
-	},
-/obj/structure/light_construct/small{
-	dir = 1
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "cB" = (
 /obj/structure/table,
-/obj/item/wrench,
-/obj/item/crowbar,
+/obj/item/weapon/wrench,
+/obj/item/weapon/crowbar,
 /obj/item/clothing/suit/apron,
-/obj/item/shovel/spade,
-/obj/item/cultivator,
+/obj/item/weapon/shovel/spade,
+/obj/item/weapon/cultivator,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/item/wirecutters,
+/obj/item/weapon/wirecutters,
 /obj/item/device/plant_analyzer,
-/obj/item/reagent_containers/glass/bucket,
-/obj/structure/light_construct/small{
-	dir = 8
-	},
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "cC" = (
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
 	},
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
@@ -1459,6 +1434,7 @@
 /area/shuttle/abandoned)
 "cE" = (
 /obj/structure/sink{
+	icon_state = "sink";
 	dir = 8;
 	pixel_x = -12;
 	pixel_y = 2
@@ -1480,20 +1456,17 @@
 /area/shuttle/abandoned)
 "cG" = (
 /obj/structure/table,
-/obj/item/kitchen/rollingpin,
-/obj/item/kitchen/knife,
+/obj/item/weapon/kitchen/rollingpin,
+/obj/item/weapon/kitchen/knife,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "cH" = (
 /obj/structure/fluff/empty_sleeper/nanotrasen,
-/obj/item/circuitboard/machine/chem_dispenser,
+/obj/item/weapon/circuitboard/machine/chem_dispenser,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1524,18 +1497,17 @@
 /obj/machinery/vending/wallmed{
 	name = "Emergency NanoMed";
 	pixel_x = -28;
+	pixel_y = 0;
 	req_access_txt = "0";
 	use_power = 0
 	},
 /obj/machinery/iv_drip{
-	density = 0
+	density = 0;
+	pixel_x = -8
 	},
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
-	},
-/obj/structure/light_construct/small{
-	dir = 8
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
@@ -1565,7 +1537,9 @@
 "cN" = (
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
 	},
 /obj/effect/decal/cleanable/xenoblood,
 /obj/effect/decal/cleanable/xenoblood/xgibs/limb,
@@ -1576,8 +1550,9 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "cO" = (
-/obj/structure/shuttle/engine/propulsion/right{
-	dir = 8
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_r";
+	dir = 4
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned)
@@ -1615,23 +1590,23 @@
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
 	},
-/obj/item/storage/box/monkeycubes{
+/obj/item/weapon/storage/box/monkeycubes{
 	pixel_y = 4
 	},
-/obj/item/storage/fancy/egg_box{
+/obj/item/weapon/storage/fancy/egg_box{
 	pixel_y = 5
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
 "cT" = (
 /obj/structure/table,
-/obj/item/reagent_containers/glass/beaker{
+/obj/item/weapon/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
-/obj/item/reagent_containers/food/condiment/enzyme{
+/obj/item/weapon/reagent_containers/food/condiment/enzyme{
 	layer = 5
 	},
-/obj/item/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/dropper,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1640,18 +1615,18 @@
 /area/shuttle/abandoned)
 "cU" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/milk,
-/obj/item/reagent_containers/food/condiment/soymilk,
-/obj/item/reagent_containers/food/condiment/soymilk,
-/obj/item/reagent_containers/food/condiment/sugar,
-/obj/item/reagent_containers/food/condiment/sugar,
-/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/milk,
+/obj/item/weapon/reagent_containers/food/condiment/milk,
+/obj/item/weapon/reagent_containers/food/condiment/milk,
+/obj/item/weapon/reagent_containers/food/condiment/soymilk,
+/obj/item/weapon/reagent_containers/food/condiment/soymilk,
+/obj/item/weapon/reagent_containers/food/condiment/sugar,
+/obj/item/weapon/reagent_containers/food/condiment/sugar,
+/obj/item/weapon/reagent_containers/food/condiment/sugar,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1660,13 +1635,13 @@
 /area/shuttle/abandoned)
 "cV" = (
 /obj/structure/table,
-/obj/item/reagent_containers/glass/beaker{
+/obj/item/weapon/reagent_containers/glass/beaker{
 	pixel_x = 5;
 	pixel_y = 2
 	},
-/obj/item/reagent_containers/glass/beaker,
-/obj/item/reagent_containers/dropper,
-/obj/item/reagent_containers/syringe,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/item/weapon/reagent_containers/syringe,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1675,10 +1650,7 @@
 /area/shuttle/abandoned)
 "cW" = (
 /obj/structure/table,
-/obj/item/folder/white{
-	pixel_x = 4;
-	pixel_y = -3
-	},
+/obj/item/weapon/folder/white,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1687,7 +1659,7 @@
 /area/shuttle/abandoned)
 "cX" = (
 /obj/structure/table,
-/obj/item/hand_labeler,
+/obj/item/weapon/hand_labeler,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1696,7 +1668,7 @@
 /area/shuttle/abandoned)
 "cY" = (
 /obj/structure/table,
-/obj/item/defibrillator,
+/obj/item/weapon/defibrillator,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1705,13 +1677,14 @@
 /area/shuttle/abandoned)
 "cZ" = (
 /obj/structure/table,
-/obj/item/reagent_containers/glass/bottle/epinephrine{
-	pixel_x = 6
+/obj/item/weapon/reagent_containers/glass/bottle/epinephrine{
+	pixel_x = 6;
+	pixel_y = 0
 	},
-/obj/item/reagent_containers/glass/bottle/charcoal{
+/obj/item/weapon/reagent_containers/glass/bottle/charcoal{
 	pixel_x = -3
 	},
-/obj/item/reagent_containers/syringe,
+/obj/item/weapon/reagent_containers/syringe,
 /obj/effect/decal/cleanable/dirt{
 	desc = "A thin layer of dust coating the floor.";
 	name = "dust"
@@ -1731,88 +1704,11 @@
 /area/shuttle/abandoned)
 "db" = (
 /obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery{
+/obj/item/weapon/storage/backpack/dufflebag/med{
+	contents = newlist(/obj/item/weapon/scalpel,/obj/item/weapon/hemostat,/obj/item/weapon/retractor,/obj/item/weapon/cautery,/obj/item/weapon/circular_saw,/obj/item/weapon/surgicaldrill,/obj/item/weapon/razor);
+	desc = "A large dufflebag for holding extra medical supplies - this one seems to be designed for holding surgical tools.";
+	name = "surgical dufflebag";
 	pixel_y = 4
-	},
-/turf/open/floor/mineral/titanium,
-/area/shuttle/abandoned)
-"dc" = (
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/structure/light_construct/small{
-	dir = 4
-	},
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/abandoned)
-"dd" = (
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/structure/light_construct{
-	dir = 1
-	},
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/abandoned)
-"de" = (
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/structure/light_construct{
-	dir = 1
-	},
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/abandoned)
-"df" = (
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/structure/light_construct,
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/abandoned)
-"dg" = (
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/structure/light_construct,
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/abandoned)
-"dh" = (
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/structure/light_construct/small{
-	dir = 8
-	},
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/abandoned)
-"di" = (
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/mineral/titanium,
-/area/shuttle/abandoned)
-"dj" = (
-/obj/effect/decal/cleanable/dirt{
-	desc = "A thin layer of dust coating the floor.";
-	name = "dust"
-	},
-/obj/structure/light_construct/small{
-	dir = 4
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/abandoned)
@@ -1946,7 +1842,7 @@ bp
 by
 bH
 bW
-df
+aL
 ac
 cs
 cC
@@ -1982,7 +1878,7 @@ bJ
 bx
 aL
 cl
-dh
+aL
 cE
 cR
 ac
@@ -2044,7 +1940,7 @@ au
 aL
 aY
 ac
-dd
+aL
 bx
 bL
 bx
@@ -2057,7 +1953,7 @@ ac
 "}
 (15,1,1) = {"
 ac
-ac
+av
 aM
 ac
 ac
@@ -2068,7 +1964,7 @@ bz
 ce
 ac
 cw
-di
+bx
 cV
 ac
 "}
@@ -2091,7 +1987,7 @@ ae
 "}
 (17,1,1) = {"
 ah
-dc
+ax
 aN
 aL
 bj
@@ -2099,10 +1995,10 @@ ax
 aL
 bO
 ax
-df
+aL
 ac
 bx
-dj
+bx
 cX
 ac
 "}
@@ -2129,7 +2025,7 @@ ay
 aP
 ba
 ac
-dd
+aL
 bx
 bQ
 bz
