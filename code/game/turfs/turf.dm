@@ -19,9 +19,8 @@
 
 	var/explosion_level = 0	//for preventing explosion dodging
 	var/explosion_id = 0
-	
-	var/list/decals
 
+	var/list/decals
 	var/requires_activation	//add to air processing after initialize?
 	var/changing_turf = FALSE
 

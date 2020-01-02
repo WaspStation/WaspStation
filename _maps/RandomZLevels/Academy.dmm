@@ -424,7 +424,6 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "AcademyAuto"
 	},
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -434,7 +433,6 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "AcademyAuto"
 	},
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -450,7 +448,6 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "AcademyAuto"
 	},
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -470,7 +467,6 @@
 /turf/open/floor/plasteel,
 /area/awaymission/academy/classrooms)
 "bA" = (
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -480,7 +476,6 @@
 /turf/open/floor/plating,
 /area/awaymission/academy/classrooms)
 "bC" = (
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -840,7 +835,6 @@
 /turf/open/floor/plating,
 /area/awaymission/academy/classrooms)
 "cK" = (
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -861,14 +855,12 @@
 /turf/open/floor/plasteel,
 /area/awaymission/academy/classrooms)
 "cN" = (
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
 /turf/open/floor/plating,
 /area/awaymission/academy/classrooms)
 "cO" = (
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
@@ -1404,7 +1396,6 @@
 /turf/open/floor/plasteel/white,
 /area/awaymission/academy/classrooms)
 "ez" = (
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
@@ -1466,7 +1457,6 @@
 	},
 /area/awaymission/academy/classrooms)
 "eJ" = (
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -1576,7 +1566,6 @@
 	},
 /area/awaymission/academy/classrooms)
 "fb" = (
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
@@ -1856,7 +1845,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -1914,8 +1902,6 @@
 /turf/open/floor/plasteel/vault,
 /area/awaymission/academy/classrooms)
 "fR" = (
-/mob/living/simple_animal/hostile/wizard,
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -1924,14 +1910,11 @@
 /area/awaymission/academy/classrooms)
 "fS" = (
 /obj/structure/window/reinforced,
-/turf/open/floor/plasteel{
-	name = "floor"
-	},
 /obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
 /area/awaymission/academy/classrooms)
 "fT" = (
 /obj/structure/table/reinforced,
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -1972,7 +1955,6 @@
 /turf/open/floor/plating,
 /area/awaymission/academy/classrooms)
 "ga" = (
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -2065,7 +2047,6 @@
 /obj/machinery/door/window{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -2159,7 +2140,6 @@
 	dir = 4
 	},
 /obj/item/ammo_casing,
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -2230,10 +2210,8 @@
 "gK" = (
 /obj/structure/window/reinforced,
 /obj/item/ammo_casing,
-/turf/open/floor/plasteel{
-	name = "floor"
-	},
 /obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel,
 /area/awaymission/academy/classrooms)
 "gL" = (
 /mob/living/simple_animal/hostile/bear,
@@ -2254,7 +2232,6 @@
 	},
 /area/awaymission/academy/classrooms)
 "gP" = (
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -2345,7 +2322,6 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/open/floor/plasteel,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -3664,7 +3640,6 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "AcademyGate"
 	},
-/turf/open/floor/plating,
 /obj/effect/turf_decal/stripes/line{
 	dir = 2
 	},
