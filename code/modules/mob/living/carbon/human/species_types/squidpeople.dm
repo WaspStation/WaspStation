@@ -65,11 +65,6 @@
 			to_chat(usr, "<span class='danger'>Invalid color. Your color is not bright enough.</span>")
 
 // Zero gravity movement
-
 /datum/species/squid/negates_gravity(mob/living/carbon/human/H)
-	if(H.mob_has_gravity())
-		speedmod = 0.4
-	else
-		speedmod = 0.8
-	if(H.movement_type)
+	if(H.movement_type && H.m_intent == MOVE_INTENT_WALK) // Can't sprint while gripping the floor
 		return 1
