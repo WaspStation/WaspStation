@@ -58,6 +58,15 @@
 		"fur"
 	],
 
+	"skrell": [
+		"skrell",
+		"squid",
+		"illithid",
+		"mindflayer",
+		"tentacle",
+		"octopus"
+	],
+
 	"skeletons": [
 		"skeleton",
 		"milk",

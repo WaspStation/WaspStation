@@ -1,7 +1,7 @@
 /datum/species/squid
 	// Cephalopod humanoids with squid-like features
-	name = "Krell"
-	id = "krell"
+	name = "Skrell"
+	id = "skrell"
 	roundstart = 1
 	default_color = "#189"
 	species_traits = list(SPECIES_ORGANIC, MUTCOLORS, EYECOLOR, NOSLIP_1)
@@ -14,11 +14,12 @@
 	miss_sound = 'sound/weapons/punchmiss.ogg'
 	disliked_food = FRIED | JUNKFOOD
 	liked_food = VEGETABLES | MEAT
-	examine_text = "a Krell"
+	examine_text = "a Skrell"
+	exotic_bloodtype = "S"
 	species_text_color = "#B30"
 	loreblurb = "A race of squid-like amphibians with an odd appearance. \
 	They posses the ability to change their pigmentation at will, often leading to confusion. \
-	Nanotrasen ensures that the Krell do not eat human grey matter, and such reports will be discarded."
+	Nanotrasen ensures that the Skrell do not eat human grey matter, and such reports will be discarded."
 
 /datum/action/innate/change_color
 	name = "Change Color"
