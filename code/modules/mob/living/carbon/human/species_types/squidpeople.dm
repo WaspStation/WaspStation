@@ -2,7 +2,7 @@
 	// Cephalopod humanoids with squid-like features
 	name = "Skrell"
 	id = "skrell"
-	roundstart = 1
+	roundstart = 0
 	default_color = "#189"
 	species_traits = list(SPECIES_ORGANIC, MUTCOLORS, EYECOLOR, NOSLIP_1)
 	mutant_bodyparts = list("squid_face")
@@ -67,5 +67,9 @@
 // Zero gravity movement
 
 /datum/species/squid/negates_gravity(mob/living/carbon/human/H)
+	if(H.mob_has_gravity())
+		speedmod = 0.4
+	else
+		speedmod = 0.8
 	if(H.movement_type)
 		return 1
