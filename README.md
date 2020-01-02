@@ -1,6 +1,6 @@
 # WaspStation
 
-[![Build Status](https://api.travis-ci.org/MarkSuckerberg/WaspStation.svg?branch=Bleeding-Edge?branch=master)](https://travis-ci.org/WaspStation/WaspStation)
+[![Build Status](https://travis-ci.org/WaspStation/WaspStation.svg?branch=master)](https://travis-ci.org/WaspStation/WaspStation)
 
 ## DOWNLOADING
 
