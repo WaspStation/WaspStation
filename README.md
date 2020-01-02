@@ -1,6 +1,6 @@
-# WaspSation
+# WaspStation
 
-[![Build Status](https://travis-ci.com/MarkSuckerberg/OracleStation.svg?branch=master)](https://travis-ci.org/OracleStation/OracleStation)
+[![Build Status](https://api.travis-ci.org/MarkSuckerberg/WaspStation.svg?branch=Bleeding-Edge?branch=master)](https://travis-ci.org/WaspStation/WaspStation)
 
 ## DOWNLOADING
 
