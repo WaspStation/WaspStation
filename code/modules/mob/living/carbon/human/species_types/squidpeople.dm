@@ -45,3 +45,14 @@
 			H.update_body()
 		else
 			to_chat(usr, "<span class='danger'>Invalid color. Your color is not bright enough.</span>")
+
+// Zero gravity movement
+
+/datum/species/squid/negates_gravity(mob/living/carbon/human/H)
+	if(H.movement_type)
+		return 1
+
+/datum/species/squid/movement_delay(mob/living/carbon/human/H)
+	. = ..()
+	if(!mob_has_gravity())
+		. += 1 //Those suckers take some effort to use.
