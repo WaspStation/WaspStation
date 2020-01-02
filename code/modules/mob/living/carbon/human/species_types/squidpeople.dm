@@ -2,7 +2,7 @@
 	// Cephalopod humanoids with squid-like features
 	name = "Skrell"
 	id = "skrell"
-	roundstart = 1
+	roundstart = 0
 	default_color = "#189"
 	species_traits = list(SPECIES_ORGANIC, MUTCOLORS, EYECOLOR, NOSLIP_1)
 	mutant_bodyparts = list("squid_face")
@@ -20,6 +20,14 @@
 	loreblurb = "A race of squid-like amphibians with an odd appearance. \
 	They posses the ability to change their pigmentation at will, often leading to confusion. \
 	Nanotrasen ensures that the Skrell do not eat human grey matter, and such reports will be discarded."
+
+/datum/species/squid/random_name(gender,unique,lastname)
+	if(unique)
+		return random_unique_skrell_name()
+
+	var/randname = skrell_name()
+
+	return randname
 
 /datum/action/innate/change_color
 	name = "Change Color"

@@ -12,6 +12,9 @@
 /proc/plasmaman_name()
 	return "[pick(GLOB.plasmaman_names)] \Roman[rand(1,99)]"
 
+/proc/skrell_name()
+	return "[pick(GLOB.skrell_names)][pick(list("-", "`"))][pick(GLOB.skrell_names)][lowertext(pick(GLOB.skrell_names))]"
+
 /proc/church_name()
 	var/static/church_name
 	if (church_name)
