@@ -1865,4 +1865,16 @@ datum/sprite_accessory/ipc_screens/textdrop
 
 /datum/sprite_accessory/squid_face/squidward
 	name = "Squidward"
-	icon_state = "squid_ward"
+	icon_state = "squidward"
+
+/datum/sprite_accessory/squid_face/ilithid
+	name = "Ilithid"
+	icon_state = "ilithid"
+
+/datum/sprite_accessory/squid_face/freaky
+	name = "Freaky"
+	icon_state = "freaky"
+
+/datum/sprite_accessory/squid_face/grabbers
+	name = "Grabbers"
+	icon_state = "grabbers"
