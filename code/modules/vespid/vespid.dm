@@ -11,7 +11,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/gun/energy/laser/vespid/mandible
-	name = "Mandible Combat Shotgun"'
+	name = "Mandible Combat Shotgun"
 	icon_state = "mandible_shotgun"
 	item_state = "shotgun"
 	desc = "A fully automatic shotgun made by Vespid Incorporated."
@@ -47,7 +47,8 @@
 /obj/item/vespidcoxa/attack_self(mob/user)
 	to_chat(user, "<span class ='warning'>Prongs expand from the blade as electricity crackles.</span>")
 	icon_state = "coxa_stunprod"
-	stunforce = 200
+	throwforce = 5
+	throw_hit_chance = 100
 	force = 10
 
 /obj/item/gun/energy/laser/vespid/tarsus
