@@ -158,6 +158,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 						if(cartridge.access & CART_CLOWN)
 							dat += "<li><img src=pda_honk.png class=pda_icon>   <a href='byond://?src=[REF(src)];choice=Honk'>Honk Synthesizer</a></li>"
 							dat += "<li><img src=pda_honk.png class=pda_icon>   <a href='byond://?src=[REF(src)];choice=Trombone'>Sad Trombone</a></li>"
+							dat += "<li><img src=pda_honk.png class=pda_icon>	<a href='byond://?src=[REF(src)];choice=Honkstore'>Clown Store</a></li>"
 						if(cartridge.access & CART_STATUS_DISPLAY)
 							dat += "<li><img src=pda_status.png class=pda_icon>   <a href='byond://?src=[REF(src)];choice=42'>Set Status Display</a></li>"
 						if(cartridge.access & CART_ENGINE)
@@ -368,6 +369,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 				if( !(last_noise && world.time < last_noise + 20) )
 					playsound(loc, 'sound/misc/sadtrombone.ogg', 50, 1)
 					last_noise = world.time
+			if("Honkstore")
+				mode = 55
 			if("Gas Scan")
 				if(scanmode == 5)
 					scanmode = 0
