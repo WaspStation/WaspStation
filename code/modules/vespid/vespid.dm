@@ -64,10 +64,6 @@
 		force = 40
 		throwforce = 10
 
-/obj/item/vespidcoxa/attack(mob/M, mob/living/carbon/human/user)
-	M.Knockdown(50)
-	M.apply_effect(STUTTER, 50)
-
 /obj/item/gun/energy/laser/vespid/tarsus
 	name = "Tarsus Self-Defense Weapon"
 	desc = "A heavy coilgun shoved into a pistol case, made by Vespid Incorporated."
