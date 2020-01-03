@@ -48,7 +48,6 @@
 	to_chat(user, "<span class ='warning'>Prongs expand from the blade as electricity crackles.</span>")
 	icon_state = "coxa_stunprod"
 	throwforce = 5
-	throw_hit_chance = 100
 	force = 10
 
 /obj/item/gun/energy/laser/vespid/tarsus
