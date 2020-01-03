@@ -21,6 +21,8 @@
 				species = /datum/species/ethari
 			if("L")
 				species = /datum/species/unathi
+			if("S")
+				species = /datum/species/squid
 		reagents.add_reagent("blood", 200, list("species" = species, "donor" = null, "viruses" = null, "blood_DNA" = null, "blood_type" = blood_type, "resistances" = null, "trace_chem" = null))
 		update_icon()
 
@@ -91,6 +93,9 @@
 
 /obj/item/reagent_containers/blood/ethari
 	blood_type = "F"
+
+/obj/item/reagent_containers/blood/squid
+	blood_type = "S"
 
 /obj/item/reagent_containers/blood/vox
 	blood_type = "V"

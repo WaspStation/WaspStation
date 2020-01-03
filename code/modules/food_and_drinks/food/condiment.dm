@@ -145,6 +145,13 @@
 		return
 	..()
 
+/obj/effect/decal/cleanable/salt/Crossed(mob/living/L)
+	if (is_species(L, /datum/species/squid))
+		while(L.loc == src.loc)
+			L.adjustFireLoss(2, TRUE)
+			to_chat(L, "<span class='danger'>The salt! It burns!</span>")
+			sleep(20)
+
 /obj/item/reagent_containers/food/condiment/peppermill
 	name = "pepper mill"
 	desc = "Often used to flavor food or make people sneeze."

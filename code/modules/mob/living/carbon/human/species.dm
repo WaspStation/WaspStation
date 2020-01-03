@@ -602,6 +602,10 @@
 		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "vox_tail_markings"
 
+	if("squid_face" in mutant_bodyparts) //Basicaly tentacle snouts
+		if((H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE)) || (H.head && (H.head.flags_inv & HIDEFACE)) || !HD || HD.status == BODYPART_ROBOTIC)
+			bodyparts_to_add -= "squid_face"
+
 	if("ears" in mutant_bodyparts)
 		if(!H.dna.features["ears"] || H.dna.features["ears"] == "None" || H.head && (H.head.flags_inv & HIDEHAIR) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)) || !HD || HD.status == BODYPART_ROBOTIC)
 			bodyparts_to_add -= "ears"
@@ -705,6 +709,8 @@
 					S = GLOB.vox_body_markings_list[H.dna.features["vox_body_markings"]]
 				if("vox_tail_markings")
 					S = GLOB.vox_tail_markings_list[H.dna.features["vox_tail_markings"]]
+				if("squid_face")
+					S = GLOB.squid_face_list[H.dna.features["squid_face"]]
 				if("wings")
 					S = GLOB.wings_list[H.dna.features["wings"]]
 				if("wingsopen")

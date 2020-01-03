@@ -66,7 +66,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/skin_tone = "caucasian1"		//Skin color
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
-	var/list/features = list("mcolor" = "FFF", "tail_unathi" = "Smooth", "tail_human" = "None", "tail_ethari" = "Bushy", "snout_ethari" = "Sharp", "ears_ethari" = "Fox", "snout" = "Round", "horns" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "ipc_screen" = "Blue", "ipc_antenna" = "None", "ipc_chassis" = "Morpheus Cyberkinetics(Greyscale)", "vox_quills" = "None", "vox_facial_quills" = "None", "vox_body_markings" = "None", "vox_body" = "Green", "vox_tail_markings" = "None")
+	var/list/features = list("mcolor" = "FFF", "tail_unathi" = "Smooth", "tail_human" = "None", "tail_ethari" = "Bushy", "snout_ethari" = "Sharp", "ears_ethari" = "Fox", "snout" = "Round", "horns" = "None", "wings" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "ipc_screen" = "Blue", "ipc_antenna" = "None", "ipc_chassis" = "Morpheus Cyberkinetics(Greyscale)", "vox_quills" = "None", "vox_facial_quills" = "None", "vox_body_markings" = "None", "vox_body" = "Green", "vox_tail_markings" = "None", "squid_face" = "Squidward")
 	var/species_looking_at = "human"	//used as a helper to keep track of in the species selct thingy
 	var/list/custom_names = list("clown", "mime", "ai", "cyborg", "religion", "deity")
 	var/prefered_security_department = SEC_DEPT_RANDOM
@@ -490,6 +490,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<h3>Vox Tail Markings</h3>"
 
 					dat += "<a href='?_src_=prefs;preference=vox_tail_markings;task=input'>[features["vox_tail_markings"]]</a><BR>"
+
+					dat += "</td>"
+				
+				if("squid_face" in pref_species.mutant_bodyparts)
+					dat += "<td valign='top' width='14%'>"
+
+					dat += "<h3>Squid Face</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=squid_face;task=input'>[features["squid_face"]]</a><BR>"
 
 					dat += "</td>"
 
@@ -1284,6 +1293,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					new_vox_tail_markings = input(user, "Choose your character's tail markings", "Character Preference") as null|anything in GLOB.vox_tail_markings_list
 					if(new_vox_tail_markings)
 						features["vox_tail_markings"] = new_vox_tail_markings
+				
+				if("squid_face")
+					var/new_face
+					new_face = input(user, "Choose your character's face:", "Character Preference") as null|anything in GLOB.squid_face_list
+					if(new_face)
+						features["squid_face"] = new_face
 
 				if("s_tone")
 					var/new_s_tone = input(user, "Choose your character's skin-tone:", "Character Preference")  as null|anything in GLOB.skin_tones
