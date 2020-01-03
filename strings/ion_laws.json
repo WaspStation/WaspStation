@@ -525,7 +525,7 @@
         "FLIRT WITH THE LIZARDS",
 		"INSULT THE ETHARI",
 		"FLIRT WITH THE ETHARI",
-		"MOISTURIZE THE SKRELL"
+		"MOISTURIZE THE YAGGOLI"
     ],
     "ionnumberbase": [
         "ONE",
@@ -819,7 +819,7 @@
         "LIZARDMEN",
 		"UNATHI",
 		"ETHARI",
-		"SKRELL",
+		"YAGGOLI",
         "PLASMAMEN",
         "SLIME PEOPLE",
         "GOLEMS",
@@ -985,7 +985,7 @@
         "TUNNEL SNAKES",
         "CORTICAL BORERS",
 		"ETHARI",
-		"BRAINSUCKING SKRELL",
+		"BRAINSUCKING YAGGOLI",
         "MEGAFAUNA"
     ],
     "ionverb": [

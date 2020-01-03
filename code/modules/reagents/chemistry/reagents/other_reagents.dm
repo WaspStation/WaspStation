@@ -469,8 +469,8 @@
 	mutationtext = "<span class='danger'>The pain subsides. You feel... furry.</span>"//I'm so sorry
 
 /datum/reagent/stableslimetoxin/squid
-	name = "Skrell Mutation Toxin"
-	id = "skrellmutationtoxin"
+	name = "Yaggoli Mutation Toxin"
+	id = "yaggolimutationtoxin"
 	description = "An inky solution produced by slimes."
 	color = "#0b685b" //RGB: 11, 141, 124
 	race = /datum/species/squid

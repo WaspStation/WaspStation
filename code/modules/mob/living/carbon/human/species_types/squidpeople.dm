@@ -1,7 +1,7 @@
 /datum/species/squid
 	// Cephalopod humanoids with squid-like features
-	name = "Skrell"
-	id = "skrell"
+	name = "Yaggoli"
+	id = "yaggoli"
 	roundstart = 0
 	default_color = "#189"
 	species_traits = list(SPECIES_ORGANIC, MUTCOLORS, EYECOLOR, NOSLIP_1)
@@ -19,19 +19,19 @@
 	disliked_food = JUNKFOOD
 	liked_food = VEGETABLES | MEAT
 	toxic_food = FRIED
-	examine_text = "a Skrell"
+	examine_text = "a Yaggoli"
 	exotic_bloodtype = "S"
 	no_equip = list(SLOT_FEET, slot_shoes)
 	species_text_color = "#B30"
 	loreblurb = "A race of squid-like amphibians with an odd appearance. \
 	They posses the ability to change their pigmentation at will, often leading to confusion. \
-	Nanotrasen ensures that the Skrell do not eat human grey matter, and such reports will be discarded."
+	Nanotrasen ensures that the Yaggoli do not eat human grey matter, and such reports will be discarded."
 
 /datum/species/squid/random_name(gender,unique,lastname)
 	if(unique)
-		return random_unique_skrell_name()
+		return random_unique_yaggoli_name()
 
-	var/randname = skrell_name()
+	var/randname = yaggoli_name()
 
 	return randname
 
