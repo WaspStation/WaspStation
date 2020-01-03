@@ -1,8 +1,8 @@
 language: generic
+os: linux
 dist: xenial
-sudo: false
 
-matrix:
+jobs:
   include:
     - name: "Run Linters"
       addons:
