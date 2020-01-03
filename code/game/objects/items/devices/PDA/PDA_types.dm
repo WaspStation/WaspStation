@@ -21,8 +21,10 @@
 	if (istype(M) && (M.real_name != src.owner))
 		slipvictims |= M
 		var/obj/item/cartridge/virus/clown/cart = cartridge
-		if(istype(cart) && cart.charges < 5)
-			cart.charges++
+		if(istype(cart)) // WASP EDIT: Neccesary for clown store intended slipping behaviour.
+			cart.bananapoints++ // Namely: Slip --> Cart banana points go up and virus charges too if they aren't over 5
+			if(cart.charges < 5) // banana
+				cart.charges++
 
 // Special AI/pAI PDAs that cannot explode.
 /obj/item/device/pda/ai
