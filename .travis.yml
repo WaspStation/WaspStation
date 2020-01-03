@@ -1,4 +1,4 @@
-anguage: generic
+language: generic
 dist: xenial
 sudo: false
 
@@ -11,6 +11,8 @@ matrix:
             - python3
             - python3-pip
             - python3-setuptools
+	  before_install:
+  		- chmod +x tools/travis/install_build_tools.sh
       install:
         - tools/travis/install_build_tools.sh
         - tools/travis/install_spaceman_dmm.sh dreamchecker
