@@ -1,5 +1,12 @@
 #define IRC_STATUS_THROTTLE 5
 
+/datum/tgs_chat_command/join
+	name = "join"
+	help_text = "Sends a join link."
+
+/datum/tgs_chat_command/join/Run(datum/tgs_chat_user/sender, params)
+	return "<[world.internet_address]:[world.port]>"
+
 /datum/tgs_chat_command/ircstatus
 	name = "status"
 	help_text = "Gets the admincount, playercount, gamemode, and true game mode of the server"
