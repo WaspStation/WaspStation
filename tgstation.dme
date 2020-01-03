@@ -2295,6 +2295,7 @@
 #include "code\modules\vehicles\secway.dm"
 #include "code\modules\vehicles\speedbike.dm"
 #include "code\modules\vehicles\vehicle.dm"
+#include "code\modules\vespid\vespid.dm"
 #include "code\modules\VR\vr_human.dm"
 #include "code\modules\VR\vr_sleeper.dm"
 #include "code\modules\zombie\items.dm"
