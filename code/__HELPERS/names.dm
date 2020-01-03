@@ -12,6 +12,9 @@
 /proc/plasmaman_name()
 	return "[pick(GLOB.plasmaman_names)] \Roman[rand(1,99)]"
 
+/proc/yaggoli_name()
+	return "[pick(GLOB.yaggoli_names)][pick(list("-", "`"))][pick(GLOB.yaggoli_names)][lowertext(pick(GLOB.yaggoli_names))]"
+
 /proc/church_name()
 	var/static/church_name
 	if (church_name)

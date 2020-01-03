@@ -1859,3 +1859,22 @@ datum/sprite_accessory/ipc_screens/textdrop
 /datum/sprite_accessory/vox_tail_markings/stripe
 	name = "Stripe"
 	icon_state = "stripe"
+
+/datum/sprite_accessory/squid_face
+	icon = 'icons/mob/mutant_bodyparts.dmi'
+
+/datum/sprite_accessory/squid_face/squidward
+	name = "Squidward"
+	icon_state = "squidward"
+
+/datum/sprite_accessory/squid_face/ilithid
+	name = "Ilithid"
+	icon_state = "ilithid"
+
+/datum/sprite_accessory/squid_face/freaky
+	name = "Freaky"
+	icon_state = "freaky"
+
+/datum/sprite_accessory/squid_face/grabbers
+	name = "Grabbers"
+	icon_state = "grabbers"

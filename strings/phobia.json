@@ -58,6 +58,15 @@
 		"fur"
 	],
 
+	"yaggoli": [
+		"yaggoli",
+		"squid",
+		"illithid",
+		"mindflayer",
+		"tentacle",
+		"octopus"
+	],
+
 	"skeletons": [
 		"skeleton",
 		"milk",
