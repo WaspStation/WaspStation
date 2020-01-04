@@ -10,6 +10,7 @@
 	selfcharge = 1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	var/on = FALSE
+	cell_type = "/obj/item/stock_parts/cell/pulse"
 
 /obj/item/gun/energy/laser/vespid/mandible
 	name = "Mandible Combat Shotgun"
