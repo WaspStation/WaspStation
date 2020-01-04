@@ -4,7 +4,7 @@
 	id = "yaggoli"
 	roundstart = 0
 	default_color = "#189"
-	species_traits = list(SPECIES_ORGANIC, MUTCOLORS, EYECOLOR, NOSLIP_1)
+	species_traits = list(SPECIES_ORGANIC, MUTCOLORS, EYECOLOR, NOSLIP_1, NO_BONES)
 	mutant_bodyparts = list("squid_face")
 	default_features = list("mcolor" = "189", "squid_face" = "Squidward")
 	coldmod = 0.6
