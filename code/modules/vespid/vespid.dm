@@ -19,6 +19,7 @@
 	ammo_x_offset = 3
 
 /obj/item/gun/energy/laser/vespid/mandible/attack_self(mob/user)
+	on = !on
 	if(!on)
 		to_chat(user, "<span class ='warning'>Additional coils flip onto the barrel with an ominous hum.</span>")
 		icon_state = "mandible_explosive"
@@ -53,6 +54,7 @@
 	var/on = FALSE
 
 /obj/item/vespidcoxa/attack_self(mob/user)
+	on = !on
 	if(!on)
 		to_chat(user, "<span class ='warning'>Prongs expand from the blade as electricity crackles.</span>")
 		icon_state = "coxa_stunprod"
@@ -72,8 +74,8 @@
 	burst_size = 2
 	ammo_type = list(/obj/item/projectile/beam/laser/heavylaser)
 
-
 /obj/item/gun/energy/laser/vespid/tarsus/attack_self(mob/user)
+	on = !on
 	if(!on)
 		to_chat(user, "<span class ='warning'>Prongs emerge from the back of the gun with a sharp twang.</span>")
 		icon_state = "tarsus_smg"
