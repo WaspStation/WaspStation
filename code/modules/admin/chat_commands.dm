@@ -5,7 +5,7 @@
 	help_text = "Sends a join link."
 
 /datum/tgs_chat_command/join/Run(datum/tgs_chat_user/sender, params)
-	return "<[world.internet_address]:[world.port]>"
+	return "<byond://[world.internet_address]:[world.port]>"
 
 /datum/tgs_chat_command/ircstatus
 	name = "status"
